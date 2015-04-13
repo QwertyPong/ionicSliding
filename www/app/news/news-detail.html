@@ -1,0 +1,41 @@
+<ion-view ng-controller="NewsDetailCtrl as vm">
+    <ion-content>
+        <div class="post-header">
+                    <ion-nav-bar class="bar bar-stable">
+                        <ion-nav-buttons side="left">
+                            <button class="button button-icon icon ion-ios-arrow-left"
+                                    ui-sref="app.news" style="color:#003166;"></button>
+                        </ion-nav-buttons>
+                        <ion-nav-buttons side="right">
+                            <button class="button button-icon icon ion-ios-upload-outline"
+                                    style="color:#003166;" ng-click="share()"></button>
+                            <button class="button button-icon icon ion-ios-chatboxes-outline"
+                                    style="color:#003166;" ui-sref="app.news-comment"></button>
+                            <button class="button button-icon icon ion-ios-heart-outline"
+                                    ui-sref="app.comment" style="color:#003166;"></button>
+                            <button class="button button-icon icon ion-ios-bookmarks-outline"
+                                    ui-sref="app.comment" style="color:#003166;"></button>
+                        </ion-nav-buttons>
+                    </ion-nav-bar>
+                </div>
+                
+                <img src="{{post_image}}" style="width:100%; margin-top:30px;">
+
+                <div class="post-content">  
+                    <div class="space-1"></div>
+                    <div class="post-category">KATEGORI 1</div>
+                    <div class="post-category">KATEGORI 2</div>
+
+                    <div class="clear"></div>
+                    
+                    <div class="post-title">{{post_title}}</div>
+                    <div class="post-author">{{post_date}} - {{post_author}}</div>
+                    <div class="space"></div>
+                    <div ng-bind-html="convertContent"></div>
+                
+                    <div class="space"></div>
+                    <div class="clear"></div>
+                </div>
+        </div>
+    </ion-content>
+</ion-view>

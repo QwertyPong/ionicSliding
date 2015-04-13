@@ -1,0 +1,41 @@
+<ion-view title="{{Title}}" ng-controller="NewsCommentCtrl">
+    <ion-nav-bar class="bar-positive">
+        <ion-nav-buttons side="left">
+            <button class="button button-icon icon ion-ios-arrow-left"
+                    ui-sref="app.news-detail"></button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="vm.loadList(true)"></ion-refresher>
+        
+        <div class="col">
+    	    <div class="space"></div>
+    	    <b>{{Title}}</b>
+    	    <div class="space"></div>
+            <div ng-bind-html="convertContent"></div>
+                
+            <div class="space"></div>
+            <div class="garis"></div>
+            <div class="space"></div>
+
+            <form>
+                <textarea ng-model="newComment.text" placeholder="Tulis Komentar"></textarea>
+                <!-- <button id="submitCcomment" class="btn btn-primary" type="button" 
+                    ng-disabled="!newComment.text" 
+                    ng-click="insertComment()">Komen</button> -->
+            </form>
+            <div class="btnComment stable-bg stable-border icon-left ion-chatbox"> Comment</div>
+
+            <div class="space"></div>
+            <div class="garis"></div>
+            <div class="space"></div>
+
+            <div ng-repeat="comment in comments">
+                <div>{{comment.text}}</div>
+            </div>
+
+        </div>
+
+    </ion-content>
+</ion-view>

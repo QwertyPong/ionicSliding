@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/lodash/dist/lodash.min.js"></script>
+    <script src="lib/angular-cache/dist/angular-cache.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="app/app.js"></script>
+    <script src="js/controllers.js"></script>
+
+    <!-- NEWS -->
+    <script src="app/news/news-ctrl.js"></script>
+    <script src="app/news/news-detail-ctrl.js"></script>
+    <script src="app/news/news-comment-ctrl.js"></script>
+    <script src="app/news-category/news-cyber-ctrl.js"></script>
+    <script src="app/news-category/news-corporate-ctrl.js"></script>
+    <script src="app/news-category/news-event-ctrl.js"></script>
+    <script src="app/news-category/news-privacy-ctrl.js"></script>
+    <script src="app/news-category/news-threats-ctrl.js"></script>
+    <script src="app/news-category/news-socmed-ctrl.js"></script>
+    <script src="app/news-category/news-government-ctrl.js"></script>
+    <script src="app/news-category/news-business-ctrl.js"></script>
+
+    <script src="app/services/newsApi.js"></script>
+    
+  </head>
+  <body ng-app="cisoApp">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

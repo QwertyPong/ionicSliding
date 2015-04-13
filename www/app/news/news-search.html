@@ -1,0 +1,29 @@
+<ion-view ng-controller="NewsSearchCtrl">
+  <ion-content>
+      <div class="menu-header">
+          <div class="bar bar-positive item-input-inset" style="border-top:none; margin-left:-20px;">
+              <button class="button button-icon icon ion-ios-arrow-left" ui-sref="app.news" style="margin-right:10px;"></button>
+              <label class="item-input-wrapper">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input type="search" placeholder="Search" ng-model="searchNews" min-length="3" id="searchNews">
+                <button class="button button-clear" ng-click="clearSearch()">X</button>
+              </label>
+              <button class="button button-clear button-positive" ng-click="search()">Search</button>
+          </div>
+      </div>
+
+      <div class="col">
+        <div class="list" ng-repeat="search in vm.newsSearch | filter:searchNews">
+            <a ng-click="vm.selectNews(news.ID)">
+                <img src="{{search.featured_image.guid}}" class="news-image">
+                <b>{{search.title}}</b><br>
+                <div ng-bind-html="vm.convertHtml(search.excerpt)"></div>
+                <div class="clear"></div>
+            </a>
+        </div>
+        <pre ng-model="result">
+          {{result}}
+        </pre>
+      </div>
+  </ion-content>
+</ion-view>

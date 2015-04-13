@@ -1,0 +1,355 @@
+/* Empty. Add your own CSS if you like */
+body {
+  background-color: #003166;
+}
+
+/* ALL */
+a.none {text-decoration: none;}
+.bar.bar-positive {background-color: #003166; margin-bottom: -10px; border-top: none; border-bottom: none;}
+.bar.bar-calm {background-color: #003166; margin-bottom: -10px; border-top: none; border-bottom: none;}
+.bar.bar-stable {margin-bottom: -10px; border-top: none; border-bottom: none;}
+.clear {clear: both;}
+.space-1 {height: 10px;}
+.space-2 {height: 20px;}
+.space-3 {height: 30px;}
+.space-4 {height: 40px;}
+.clear {clear:both;}
+.trim-info {
+      max-width: 50px;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;  
+      line-height: 15px;
+      position: relative;
+   }
+
+/* LOGIN */
+.login-img {
+  text-align: center;
+  width: 100%;
+}
+.login {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+img.login {
+  width: 250px;
+  margin: 0px auto;
+
+}
+.login-text {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* HEADLINE NEWS */
+.header {
+  height: 130px;
+  width: 100%;
+  background-color: #003166;
+  padding:10px;
+  text-align: center;
+}
+.header img.logo {
+  width: 110px;
+  margin: 10px auto;
+}
+.menu-home {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 20px;
+}
+figure.headline {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+figure.headline .title {
+  position: absolute;
+  font-size: 40px;
+  line-height: 1.1em;
+  width: 100%;
+  color: #FFFFFF;
+  bottom: 0;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 100px;
+  text-align: left;
+  background-color: rgba(5, 5, 5, 0.5)
+}
+figure.headline .img-headline {
+    display: block;
+    width: 100%;
+    height: 710px;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* MENU-HIDDEN */
+ion-top-menu {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  background: #003166;
+  color: white;
+  z-index: 10;
+  transition: all .5s; 
+}
+ion-pane {
+  position: absolute;
+  transition: all .5s !important; 
+}
+ion-top-menu .item {
+  background: none;
+  border-color: #222;
+  color: white; 
+}
+.menu-header {
+  background-color: #003166;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.menu-footer {
+  position: absolute;
+  width: 100%;
+  background-color: #003166;
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  border-top:1px solid #000;
+  border-bottom:1px solid #000;
+}
+.menu-header-headline {
+  padding: 0;
+}
+figure.menu-headline {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+figure.menu-headline .back-title {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  background-color: rgba(5, 5, 5, 0.5);
+}
+figure.menu-headline .title {
+  position: absolute;
+  font-size: 30px;
+  line-height: 1.1em;
+  width: 100%;
+  color: #FFFFFF;
+  margin: 0 auto;
+  bottom: 20px;
+  text-align: center;
+}
+figure.menu-headline .img-menu-headline {
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-position: center center;
+    background-size: cover;
+}
+figure.category {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  width: 50%;
+  float: left;
+}
+figure.category .back-title {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  background-color: rgba(5, 5, 5, 0.5);
+}
+figure.category .title {
+  position: absolute;
+  font-size: 20px;
+  line-height: 1.1em;
+  width: 100%;
+  color: #FFFFFF;
+  margin: 0 auto;
+  bottom: 15px;
+  text-align: center;
+}
+figure.category .img-category {
+    display: block;
+    width: 100%;
+    height: 117px;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/* LIST NEWS */
+.category-header {
+  background-color: #003166;
+  padding: 60px 20px 30px 20px;
+  font-size: 30px;
+  text-align: left;
+}
+.category-title {
+  font-size: 40px;
+  color: #FFF;
+  bottom: 10px;
+}
+.category-all {width: 100%;}
+.category-right{
+  width: 60%;
+  float: right;
+  padding-left: 20px;
+}
+.category-left{
+  width: 40%;
+  float: left;
+}
+.item {padding:6px;}
+.item, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+figure.headline .title-list {
+  position: absolute;
+  font-size: 30px;
+  line-height: 1.1em;
+  width: 100%;
+  color: #FFFFFF;
+  bottom: 0;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  background-color: rgba(5, 5, 5, 0.5)
+}
+figure.headline .img-list {
+    display: block;
+    width: 100%;
+    height: 300px;
+    background-position: center center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+
+/* CONTENT POST */
+.ng-binding p a {
+  width: 100%;
+  height: auto;
+  font-size: 18px;
+}
+.ng-binding img {
+  display: none;
+}
+.post-header {
+  background-color: #F7F7F7;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.post-content {
+  padding: 10px;
+  background-color: #F7F7F7;
+}
+.post-category {
+  border: 2px solid #003166;
+  padding: 5px;
+  color: #003166;
+  width: 30%;
+  text-align: center;
+  float: left;
+  margin-right: 10px;
+}
+.post-title {
+  font-size: 35px;
+  line-height: 1.1em;
+  color: #000000;
+  text-align: left;
+  margin-top: 20px; 
+}
+.post-author {
+  font-size: 11px;
+  line-height: 1.1em;
+  color: #000000;
+  text-align: left;
+  margin-top: 10px; 
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+
+/* ==================================== MAGAZINE ==================================== */
+/* MAGAZINES */
+.img-last-issue {
+  width: 100%;
+  height: 150px;
+  background-color: #999;
+}
+p.desc-last-issue {
+  color: #003166;
+  font-size: 12px;
+  line-height: 1.1em;
+}
+.space {
+  height: 10px;
+}
+
+/* MAGAZINE-DETAIL */
+.box {
+  width: 100%;
+  height: auto;
+}
+.image {
+  width: 110px;
+  background-color: #999;
+  height: 150px;
+  margin-bottom: 5px;
+  float: left;
+  margin-right: 5px;
+}
+.text {
+  width: 120px;
+  font-size: 10px;
+  height: 30px; /* changed from auto */
+  margin-bottom: 20px;
+  text-align: center;
+}
+.btn {
+  width: 120px;
+  height: 25px;
+  padding: 3px;
+}
+.btnBuy {
+  width: 20%;
+  text-align: center;
+  color: #FFF;
+  font-size: 10px;
+  vertical-align: middle;
+  float: left;
+  margin-right: 5px;
+}
+.btnSubscribe {
+  width: 30%;
+  text-align: center;
+  color: #003166;
+  font-size: 10px;
+  vertical-align: middle;
+  border:1px solid #003166;
+  float: left;
+}
+
+

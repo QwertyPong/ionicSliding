@@ -1,0 +1,117 @@
+<ion-view ng-controller="NewsCtrl as vm">
+  <ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="true" class="has-header" style="position:absolute; bottom:0; left:0; right:0; top:0;" >
+
+    <!-- HEADLINE NEWS -->
+    <ion-slide>
+      <ion-top-menu>
+        <ion-scroll style="width:100%;height:100%">
+          <!-- MENU HEADER -->
+          <div class="menu-header">
+            <div class="bar bar-positive item-input-inset" style="border-top:none; margin-left:-10px;">
+              <button class="button button-icon icon ion-ios-arrow-thin-up" ng-click="toggleTopMenu()" style="margin-right:20px;"></button>
+              <label class="item-input-wrapper">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input type="search" placeholder="Search">
+              </label>
+            </div>
+          </div>
+
+          <!-- MENU HEADLINE -->
+          <div class="menu-header-headline">
+            <div ng-repeat="news in vm.news | limitTo:1" ng-click="vm.selectNews(news.ID)">
+              <figure class="menu-headline">
+                  <div class="back-title"></div>
+                  <div class="title">Headline</div>
+                  <div class="img-menu-headline" style="background-image: url('{{news.featured_image.guid}}');"></div>
+                </figure>
+            </div>
+          </div>
+          <div class="clear"></div>
+
+          <div class="list">
+            <!-- MENU CYBERCRIME -->
+            <div ui-sref="app.news-cybercrime" ng-click="toggleTopMenu()" ng-controller="NewsCyberCtrl as vm">
+              <div ng-repeat="newsCyber in vm.newsCyber | limitTo:1">
+                <figure class="category">
+                  <div class="back-title"></div>
+                  <div class="title">News A</div>
+                  <div class="img-category" style="background-image: url('{{newsCyber.featured_image.guid}}');"></div>
+                </figure>
+              </div>
+            </div>
+
+            <!-- MENU PRIVACY -->
+            <div ui-sref="app.news-privacy" ng-click="toggleTopMenu()" ng-controller="NewsPrivacyCtrl as vm">
+              <div ng-repeat="newsPrivacy in vm.newsPrivacy | limitTo:1">
+                <figure class="category">
+                  <div class="back-title"></div>
+                  <div class="title">News B</div>
+                  <div class="img-category" style="background-image: url('{{newsPrivacy.featured_image.guid}}');"></div>
+                </figure>
+              </div>
+            </div>
+
+            <!-- MENU THREATS -->
+            <div ui-sref="app.news-threats" ng-click="toggleTopMenu()" ng-controller="NewsThreatsCtrl as vm">
+              <div ng-repeat="newsThreats in vm.newsThreats | limitTo:1">
+                <figure class="category">
+                  <div class="back-title"></div>
+                  <div class="title">News C</div>
+                  <div class="img-category" style="background-image: url('{{newsThreats.featured_image.guid}}');"></div>
+                </figure>
+              </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="menu-footer">
+              <table style="width:100%;">
+                <tr>
+                  <td class="bar-calm">
+                    <button class="button button-icon icon ion-ios-person" ng-click="toggleTopMenu()"></button>
+                  </td>
+                  <td class="bar-calm">
+                    <button class="button button-icon icon ion-ios-gear" ng-click="toggleTopMenu()"></button>
+                  </td>
+                  <td class="bar-calm">
+                    <button class="button button-icon icon ion-ios-bookmarks" ng-click="toggleTopMenu()"></button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </ion-scroll>
+      </ion-top-menu>
+
+      <ion-pane>
+        <ion-content>
+          <div class="header">
+            <div class="space-2"></div>
+            <img src="img/menu.png" class="menu-home" ng-click="toggleTopMenu()">
+            <!-- <img src="img/logo.png" class="logo"> -->
+            <div class="space-2"></div>
+          </div>
+        
+          <div ng-repeat="news in vm.news | limitTo:1" ng-click="vm.selectNews(news.ID)">
+            <figure class="headline">
+              <a ng-click="vm.selectNews(news.ID)">
+                <div class="img-headline" style="background-image: url('{{news.featured_image.guid}}');"></div>
+                <div class="title">{{news.title}}</div>
+              </a>
+            </figure>
+          </div>
+        </ion-content>
+      </ion-pane>
+    </ion-slide>
+
+    <!-- LIST NEWS -->
+    <ion-slide ng-repeat="news in vm.news">
+      <ion-content>
+        <div ng-repeat="news in vm.news | limitTo:2">
+            [{{$index+1}}] {{news.title}}
+        </div>
+      </ion-content>
+    </ion-slide>
+    
+  </ion-slide-box>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view view-title="Threats Archive" ng-controller="NewsThreatsCtrl as vm">
+  <ion-content style="background:#000;">
+      <div class="category-header">
+          <div class="bar bar-positive item-input-inset" style="border-top:none; border-bottom:none; margin-left:-10px;">
+              <button class="button button-icon icon ion-ios-arrow-left" ui-sref="app.news" style="margin-right:20px;"></button>
+              <div class="category-title">THREATS</div>
+          </div>
+      </div>
+      <div class="list">
+          <a class="item" ng-repeat="category in vm.newsThreats" ng-click="vm.selectNews(category.ID)">
+              <img src="{{category.featured_image.guid}}" class="category-left">
+              <div class="category-right">
+                <h2>{{category.title}}</h2>
+                <div class="item-content" ng-bind-html="vm.convertHtml(category.excerpt)"></div>
+              </div>
+          </a>
+          <div class="clear"></div>
+      </div>
+  </ion-content>
+  
+</ion-view>
